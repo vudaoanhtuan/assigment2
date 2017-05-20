@@ -3,6 +3,7 @@
 
 
 #include "datatype.h"
+#include <string.h>
 
 class ACCOUNT{
 private:
@@ -10,24 +11,24 @@ private:
     long long userId;
     char name[100];
     char pass[100];
-    bool active;
+    bool status;
     ROLE role;
 
 public:
     ACCOUNT();
     ACCOUNT(const ACCOUNT &);
-    ~ACCOUNT();
-    ACCOUNT operator=(const ACCOUNT &);
+    const ACCOUNT operator=(const ACCOUNT &);
 
     // GETTER
-    long long getId();
-    long long getUserId();
-    char* getName();
-    char* getPass();
-    bool isActive();
-    ROLE getRole();
+    long long getId() const;
+    long long getUserId() const;
+    char* getName() const;
+    char* getPass() const;
+    bool isActive() const;
+    ROLE getRole() const;
 
     // SETTER
+    void setId(long long);
     void setUserId(long long);
     void setName(char*);
     void setPass(char*);
