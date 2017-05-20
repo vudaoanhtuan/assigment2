@@ -29,7 +29,9 @@ SOURCES += main.cpp\
     account.cpp \
     book.cpp \
     write_data.cpp \
-    read_data.cpp
+    read_data.cpp \
+    test_read_write.cpp \
+    test_gui.cpp
 
 HEADERS  += mainwindow.h \
     datatype.h \
@@ -37,6 +39,9 @@ HEADERS  += mainwindow.h \
     account.h \
     book.h \
     write_data.h \
-    read_data.h
+    read_data.h \
+    test_read_write.h \
+    test_gui.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    test_gui.ui

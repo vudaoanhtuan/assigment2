@@ -5,7 +5,7 @@ void readUser(vector<USER *> &user, int n){
     f = fopen("data/user.dat", "r");
     for (int i=0; i<n; i++){
         USER *t = new USER;
-        fwrite(t, sizeof(USER), 1, f);
+        fread(t, sizeof(USER), 1, f);
         user.push_back(t);
     }
     fclose(f);
@@ -16,7 +16,7 @@ void readAccount(vector<ACCOUNT *> &acc, int n){
     f = fopen("data/account.dat", "r");
     for (int i=0; i<n; i++){
         ACCOUNT *t = new ACCOUNT;
-        fwrite(t, sizeof(ACCOUNT), 1, f);
+        fread(t, sizeof(ACCOUNT), 1, f);
         acc.push_back(t);
     }
     fclose(f);
@@ -27,7 +27,7 @@ void readBook(vector<BOOK *> &book, int n){
     f = fopen("data/book.dat", "r");
     for (int i=0; i<n; i++){
         BOOK *t = new BOOK;
-        fwrite(t, sizeof(BOOK), 1, f);
+        fread(t, sizeof(BOOK), 1, f);
         book.push_back(t);
     }
     fclose(f);
