@@ -27,12 +27,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     user.cpp \
     account.cpp \
-    book.cpp
+    book.cpp \
+    write_data.cpp \
+    read_data.cpp
 
 HEADERS  += mainwindow.h \
     datatype.h \
     user.h \
     account.h \
-    book.h
+    book.h \
+    write_data.h \
+    read_data.h
 
 FORMS    += mainwindow.ui
