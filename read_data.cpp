@@ -32,3 +32,24 @@ void readBook(vector<BOOK *> &book, int n){
     }
     fclose(f);
 }
+
+void readNum(NUMDATA &numData){
+    FILE *f;
+    f=fopen("data/numdata.ini","rb");
+    fread(&(numData.numUser),sizeof(int),1,f);
+    fread(&(numData.numAccount),sizeof(int),1,f);
+    fread(&(numData.numBook),sizeof(int),1,f);
+    fread(&(numData.numReader),sizeof(int),1,f);
+    fclose(f);
+}
+
+void readReader(vector<Reader *> &reader, int n){
+    FILE *f;
+    f=fopen("data/reader.dat","rb");
+    for (int i=0;i<n;i++){
+        Reader *t = new Reader;
+        fread(t, sizeof(Reader), 1, f);
+        reader.push_back(t);
+    }
+    fclose(f);
+}
