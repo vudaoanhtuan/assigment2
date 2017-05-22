@@ -31,7 +31,9 @@ SOURCES += main.cpp\
     write_data.cpp \
     read_data.cpp \
     test_read_write.cpp \
-    test_gui.cpp
+    test_gui.cpp \
+    reader.cpp \
+    readergui.cpp
 
 HEADERS  += mainwindow.h \
     datatype.h \
@@ -41,7 +43,10 @@ HEADERS  += mainwindow.h \
     write_data.h \
     read_data.h \
     test_read_write.h \
-    test_gui.h
+    test_gui.h \
+    reader.h \
+    readergui.h
 
 FORMS    += mainwindow.ui \
-    test_gui.ui
+    test_gui.ui \
+    readergui.ui

@@ -37,25 +37,25 @@ int BOOK::getYear() const{
 }
 
 char* BOOK::getTitle() const{
-    char *t = new char;
+    char *t = new char[100];
     strcpy(t, title);
     return t;
 }
 
 char* BOOK::getAuthor() const{
-    char *t = new char;
+    char *t = new char[100];
     strcpy(t, author);
     return t;
 }
 
 char* BOOK::getPublisher() const{
-    char *t = new char;
+    char *t = new char[100];
     strcpy(t, publisher);
     return t;
 }
 
 char* BOOK::getCatagory() const{
-    char *t = new char;
+    char *t = new char[100];
     strcpy(t, catagory);
     return t;
 }

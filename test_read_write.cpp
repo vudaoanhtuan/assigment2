@@ -5,7 +5,7 @@ void testWriteData(){
     USER *u = new USER;
     u->setName((char*)"Vu Dao Anh Tuan");
     u->setCode(1235434);
-    u->setDob({23,03,1998});
+//    u->setDob({23,03,1998});
     u->setEmail((char*)"vudaoanhtuan@gmail.com");
     u->setId(1000);
     u->setJob((char*)"student");
@@ -42,6 +42,18 @@ void testWriteData(){
     b2->setYear(2005);
     book.push_back(b2);
     writeBook(book,2);
+
+    vector<Reader*> reader;
+    Reader *r = new Reader(1100);
+    reader.push_back(r);
+    writeReader(reader,1);
+
+    NUMDATA data;
+    data.numAccount=1;
+    data.numBook=2;
+    data.numReader=1;
+    data.numUser=1;
+    writeNum(data);
 }
 
 void testReadData(){
